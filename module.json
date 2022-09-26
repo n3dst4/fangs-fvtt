@@ -8,9 +8,9 @@
   "esmodules": [
     "module/fangs.js"
   ],
-  "download": "https://gitlab.com/n3dst4/fangs-fvtt/-/archive/main/louder-whispers-v3.2.0.zip",
-  "manifest": "https://gitlab.com/n3dst4/fangs-fvtt/-/raw/main/module.json",
-  "url": "https://gitlab.com/n3dst4/fangs-fvtt",
+  "download": "https://github.com/n3dst4/fangs-fvtt/archive/refs/tags/v1.0.0.zip",
+  "manifest": "https://raw.githubusercontent.com/n3dst4/fangs-fvtt/main/module.json",
+  "url": "https://github.com/n3dst4/fangs-fvtt",
   "readme": "https://gitlab.com/n3dst4/fangs-fvtt/-/blob/main/README.md",
   "bugs": "https://gitlab.com/n3dst4/fangs-fvtt/-/issues",
   "changelog": "https://gitlab.com/n3dst4/fangs-fvtt/-/blob/main/CHANGELOG.md",
@@ -23,6 +23,6 @@
   ],
   "compatibility": {
     "minimum": "10.278",
-    "verified": "10.285"
+    "verified": "10.286"
   }
 }
