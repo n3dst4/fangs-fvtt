@@ -1,0 +1,28 @@
+{
+  "title": "Fangs",
+  "description": "Fangs NBA-in-FitD modifier for Scum & Villiany.",
+  "version": "3.2.0",
+  "styles": [
+    "styles/fangs.css"
+  ],
+  "esmodules": [
+    "module/fangs.js"
+  ],
+  "download": "https://gitlab.com/n3dst4/fangs-fvtt/-/archive/main/louder-whispers-v3.2.0.zip",
+  "manifest": "https://gitlab.com/n3dst4/fangs-fvtt/-/raw/main/module.json",
+  "url": "https://gitlab.com/n3dst4/fangs-fvtt",
+  "readme": "https://gitlab.com/n3dst4/fangs-fvtt/-/blob/main/README.md",
+  "bugs": "https://gitlab.com/n3dst4/fangs-fvtt/-/issues",
+  "changelog": "https://gitlab.com/n3dst4/fangs-fvtt/-/blob/main/CHANGELOG.md",
+  "id": "fangs",
+  "authors": [
+    {
+      "name": "Neil de Carteret",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "10.278",
+    "verified": "10.285"
+  }
+}
