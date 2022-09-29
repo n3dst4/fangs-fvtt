@@ -1,14 +1,14 @@
 {
   "title": "Fangs",
   "description": "Fangs NBA-in-FitD modifier for Scum & Villiany.",
-  "version": "3.2.0",
+  "version": "1.0.4",
   "styles": [
     "styles/fangs.css"
   ],
   "esmodules": [
     "module/fangs.js"
   ],
-  "download": "https://github.com/n3dst4/fangs-fvtt/archive/refs/tags/v1.0.3.zip",
+  "download": "https://github.com/n3dst4/fangs-fvtt/archive/refs/tags/v1.0.4.zip",
   "manifest": "https://raw.githubusercontent.com/n3dst4/fangs-fvtt/main/module.json",
   "url": "https://github.com/n3dst4/fangs-fvtt",
   "readme": "https://gitlab.com/n3dst4/fangs-fvtt/-/blob/main/README.md",
