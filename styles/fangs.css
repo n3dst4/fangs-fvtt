@@ -58,11 +58,15 @@ body {
 #portrait {
   width: 155px;
   height: 200px;
-  box-shadow: 3px 3px 10px 0 #00000082, 0 0 2em 0 #fff9 inset;
+  box-shadow: 3px 3px 6px 0 #00000082, 0 0 2em 0 #7779 inset;
   margin-right: 24px;
   transform: rotate(-2deg);
   background-position: center;
   background-size: cover;
+  background-image: 
+  linear-gradient(155deg, #fff7, #fff0 20%, #fff0 40%, #fff7 50%, #fff0 60%, #fff0 80%,#fff7 100%),
+    var(--portrait-image)
+    ;
 }
 
 * {
