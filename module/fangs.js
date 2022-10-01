@@ -8,12 +8,25 @@ const enhanceMessageKey = "enhanceMessage";
 const customPathKey = "customPath";
 const notifChoices = [no, yesTemp, yesPerm];
 
+const analyzeTip = "When you straddle between sub- and hyper-consciousness to gain information quickly about threats which might otherwise be overwhelming.";
+
 Hooks.once("init", async function () {});
 
-Hooks.once("ready", () => {});
+Hooks.once("ready", () => {
+  // fix the template data
+  delete game.system.model.Actor.character.attributes.resolve.skills.attune 
+  game.system.model.Actor.character.attributes.resolve.skills.analyze = {
+    "label": "Analyze",
+    "tip": analyzeTip,
+    "value": [
+      0
+    ],
+    "max": 3
+  }
+});
 
 Hooks.on("renderActorSheet", (app, html, data) => {
-  // html.find('[data-roll-attribute="attune"]').html("Analyze");
+  // replace the portrait img with a div, so it can use background image logic
   const img = html.find("#name-alias > img");
   const src = img.attr("src");
   img.remove();
@@ -33,18 +46,19 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 });
 
 Hooks.on("createActor", (actor, options, userId) => {
+  // we have analyze, not attune, so fix this inside the actor
   actor.update({
     system: {
       attributes: {
         resolve: {
           skills: {
             "-=attune": null,
-            analyze: {
-              label: "Analyze",
-              tip: "When you straddle between sub- and hyper-conscious awareness to gain information quickly when faced with threats which might otherwise be overwhelming.",
-              value: 1,
-              max: 3,
-            },
+            // analyze: {
+            //   label: "Analyze",
+            //   tip: analyzeTip,
+            //   value: 0,
+            //   max: 3,
+            // },
           }
         },
       },

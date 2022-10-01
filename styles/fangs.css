@@ -83,6 +83,31 @@ body {
   border-bottom-width: 15px;
 }
 
+.window-app, 
+#sidebar, 
+.main-controls li, 
+.sub-controls li, 
+#players, 
+#hotbar > *,
+#navigation a,
+#navigation li { 
+  backdrop-filter: blur(10px);
+  /* background-image: linear-gradient(to bottom, #000b 0%, #0006 100%); */
+  background-image: linear-gradient(
+    /* to bottom, #4009 0%, #2009 100% */
+    180deg,
+    hsl(0deg 100% 13% / 80%) 0%,
+    hsl(0deg 100% 7% / 80%) 50%,
+    hsl(0deg 0% 0% / 80%) 100%
+  );
+  /* mix-blend-mode: darken; */
+}
+
+/* .window-app {
+  box-shadow: 0 0 20px #f00;
+} */
+
+
 * {
   font-family: "Noto Sans Mono", monospace;
   font-variant: small-caps;
