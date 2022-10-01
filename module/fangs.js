@@ -43,6 +43,8 @@ Hooks.on("renderActorSheet", (app, html, data) => {
       }).browse(src);
     });
   html.find("#name-alias").prepend(portraitDiv);
+  // I am constantly haunted by attune coming back, so let's just hide it
+  html.find(`[data-roll-attribute="attune"]`).closest(".flex-horizontal").remove();
 });
 
 Hooks.on("createActor", (actor, options, userId) => {
