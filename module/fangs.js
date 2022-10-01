@@ -47,22 +47,18 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 
 Hooks.on("createActor", (actor, options, userId) => {
   // we have analyze, not attune, so fix this inside the actor
-  actor.update({
-    system: {
-      attributes: {
-        resolve: {
-          skills: {
-            "-=attune": null,
-            // analyze: {
-            //   label: "Analyze",
-            //   tip: analyzeTip,
-            //   value: 0,
-            //   max: 3,
-            // },
-          }
+  if (userId === game.userId) {
+    actor.update({
+      system: {
+        attributes: {
+          resolve: {
+            skills: {
+              "-=attune": null,
+            }
+          },
         },
-      },
-    }
-  });
+      }
+    });
+  }
 });
 
