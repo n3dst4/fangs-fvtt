@@ -4,6 +4,10 @@
 body {
   --fangs-bg: #550001;
   --fangs-fg: #fff;
+  --portrait-line-color-1: #fff2;
+  --portrait-line-color-2: #0001;
+  --portrait-line-spacing: 3px;
+  --portrait-line-width: 3px;
 }
 
 .window-app .window-content {
@@ -64,9 +68,19 @@ body {
   background-position: center;
   background-size: cover;
   background-image: 
-  linear-gradient(155deg, #fff7, #fff0 20%, #fff0 40%, #fff7 50%, #fff0 60%, #fff0 80%,#fff7 100%),
+    /* linear-gradient(155deg, #fff7, #fff0 20%, #fff0 40%, #fff7 50%, #fff0 60%, #fff0 80%,#fff7 100%), */
+    repeating-linear-gradient(
+      to bottom,
+      var(--portrait-line-color-1),
+      var(--portrait-line-color-1) var(--portrait-line-spacing),
+      var(--portrait-line-color-2) var(--portrait-line-spacing),
+      var(--portrait-line-color-2) calc(var(--portrait-line-spacing) + var(--portrait-line-width))
+    ),
     var(--portrait-image)
     ;
+  filter: grayscale(100%);
+  border: 6px solid #fff;
+  border-bottom-width: 15px;
 }
 
 * {

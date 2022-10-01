@@ -13,7 +13,7 @@ Hooks.once("init", async function () {});
 Hooks.once("ready", () => {});
 
 Hooks.on("renderActorSheet", (app, html, data) => {
-  html.find('[data-roll-attribute="attune"]').html("Awareness");
+  // html.find('[data-roll-attribute="attune"]').html("Analyze");
   const img = html.find("#name-alias > img");
   const src = img.attr("src");
   img.remove();
@@ -31,3 +31,24 @@ Hooks.on("renderActorSheet", (app, html, data) => {
     });
   html.find("#name-alias").prepend(portraitDiv);
 });
+
+Hooks.on("createActor", (actor, options, userId) => {
+  actor.update({
+    system: {
+      attributes: {
+        resolve: {
+          skills: {
+            "-=attune": null,
+            analyze: {
+              label: "Analyze",
+              tip: "When you straddle between sub- and hyper-conscious awareness to gain information quickly when faced with threats which might otherwise be overwhelming.",
+              value: 1,
+              max: 3,
+            },
+          }
+        },
+      },
+    }
+  });
+});
+
