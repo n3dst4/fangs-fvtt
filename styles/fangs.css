@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
   --fangs-bg: #550001;
@@ -37,11 +38,28 @@ body {
 * #attributes .stripe,
 * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"],
 * .black-label,
-* .big-teeth-section .big-teeth label[for$="-0"]
+* .big-teeth-section .big-teeth label[for$="-0"],
+* .label-stripe-chat,
+* .chat-label-small
 {
   background-color: var(--fangs-bg);
   background-image: url(../assets/nice_red_agents.webp);
   color: var(--fangs-fg);
+}
+
+* .label-stripe-chat {
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+* .chat-label {
+  height: unset !important;
+}
+
+* .chat-label-small {
+  padding: 0.2em 1em;
+  border-radius: 0 0 0.5em 0.5em;
+  height: unset !important;
 }
 
 * .big-teeth-section {
@@ -107,12 +125,18 @@ body {
   box-shadow: 0 0 20px #f00;
 } */
 
+.chat-message {
+  background-image: url(../assets/marjanblan-5Ft4NWTmeJE-unsplash.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 * {
-  font-family: "Noto Sans Mono", monospace;
-  font-variant: small-caps;
+  font-family: "Ubuntu", sans-serif;
+  /* font-variant: small-caps; */
   /* font-family: 'Unica One', sans-serif; */
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 

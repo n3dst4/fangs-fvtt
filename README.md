@@ -10,5 +10,3 @@ Fangs NBA-in-FitD modifier for Scum & Villainy.
     ```bash
     (TAG=v1.0.7; git commit -am $TAG; git tag -a $TAG -m $TAG; git push origin $TAG; git push) 
     ```
-
-    
